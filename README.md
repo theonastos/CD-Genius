@@ -14,3 +14,4 @@ A prototype of an online cd-store.
 
 #Footnote
 The project is still ongoing there are many major updates remaing. In the final update there will be files including the sql queries for creating the tables.
+(debug)
