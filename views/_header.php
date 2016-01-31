@@ -1,8 +1,18 @@
+<?php  
+      include("../user/order_amount.php");
+?>
+
 <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand" href="home.php">Cd-Genius</a>
-            <nav>
+            <nav>    
+                  <a class="navbar-brand" href="home.php">Cd-Genius</a>
+                  <form class="navbar-form" role="search">
+                        <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="search-submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                  </form>
                   <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
@@ -11,13 +21,18 @@
                                           if(!$_SESSION['login_user']){
                                                 echo "<li><a href='register-form.php'>Log In</a></li>";
                                           }else{
-                                                echo "<li><a>".$_SESSION['login_user']."</a></li>";
+                                                echo "<li class='disabled'><a style='color:blue'>".$_SESSION['login_user']."</a></li>";
                                                 echo "<li><a href='$home/user/logout.php'>Log Out</a></li>";
                                           }
                                     ?>
                               </ul>
                         </li>
-                        <li><a href="#">Cart<br>0,00</a></li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></br><?php echo orderAmount($db);?>&#8364;</a>
+                              <ul class="dropdown-menu">
+                                    <li><a href="#">Manage Your Orders</a></li>
+                              </ul>
+                        </li>
                   </ul>
             </nav>
       </div>

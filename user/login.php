@@ -8,18 +8,16 @@
          // username and password sent from form 
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-      $sql = "SELECT user_id FROM user WHERE username = '$myusername' and password = '$mypassword'";
+      $query = "SELECT user_id FROM user WHERE username = '$myusername' and password = '$mypassword'";
 
-      $result = mysqli_query($db,$sql);
+      $result = mysqli_query($db,$query);
       if (!$result) {
-         die('Invalid query: ' . mysql_error());
+         die('Invalid query: ' . mysqli_error($db));
       }
 
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-
-      $active = $row['active'];
 
       $count = mysqli_num_rows($result);
 
@@ -28,12 +26,14 @@
       if($count == 1) {
 
          $_SESSION['login_user'] = $myusername;
+
+         $_SESSION['user-id'] = $row['user_id'];
+
          header("location: $home/views/home.php");
 
       }else {
 
-         $error = "Your Login Name or Password is invalid";
-         echo $error;
+         echo "Your Login Name or Password is invalid";
 
       }
       mysql_close($db);

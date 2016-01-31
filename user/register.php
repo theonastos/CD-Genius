@@ -25,7 +25,7 @@
 				header( "refresh:5;url=../views/home.php" );
 
 			}else {
-				echo "Your registration failed...";
+				die('Invalid query: ' . mysqli_error($db));
 			}
 		}else{
 			echo "Your passwords do not match";
@@ -46,12 +46,10 @@
       		
       		$result = mysqli_query($db,$sql);
       		if (!$result) {
-         			die('Invalid query: ' . mysql_error());
+         			die('Invalid query: ' . mysqli_error($db));
       		}
 			
 			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-      		$active = $row['active'];
 
       		$count = mysqli_num_rows($result);
 

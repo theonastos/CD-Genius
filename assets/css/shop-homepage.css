@@ -1,8 +1,36 @@
-
 /*universal*/
 
 body {
     padding-top: 90px;
+    font-family: "Arial", Helvetica, sans-serif;
+}
+
+/*header*/
+
+.navbar-brand{
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+}
+
+.navbar-form
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 15px;
+    text-align: center;
+    margin: auto;
+}
+
+.row {
+    font-size: 1.1em;
 }
 
 .caption {
@@ -12,6 +40,10 @@ body {
 
 .caption h4 {
     white-space: nowrap;
+}
+
+.caption a:link, a:visited {
+    text-decoration: none;
 }
 
 .thumbnail img {
@@ -62,14 +94,4 @@ footer {
 
 .new-users .registered-users {
     display: inline;
-}
-
-/*display products*/
-
-ul.products li {
-    width: 200px;
-    display: inline-block;
-    vertical-align: top;
-    *display: inline;
-    *zoom: 1;
 }
