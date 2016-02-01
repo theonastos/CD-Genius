@@ -5,13 +5,13 @@
 <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand" href="home.php"><span>Cd-Genius</span></a>
             <nav>    
-                  <a class="navbar-brand" href="home.php">Cd-Genius</a>
-                  <form class="navbar-form" role="search">
+                  <form action="home.php" method="post" class="navbar-form" role="search">
                         <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Search">
+                              <input type="text" class="form-control" name="search" placeholder="Search">
                         </div>
-                        <button type="search-submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        <button type="submit" name="search-submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                   </form>
                   <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
