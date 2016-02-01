@@ -5,7 +5,7 @@
 <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand" href="home.php"><span>Cd-Genius</span></a>
+            <a class="navbar-brand" href="/CD-Genius/views/home.php"><span>Cd-Genius</span></a>
             <nav>    
                   <form action="home.php" method="post" class="navbar-form" role="search">
                         <div class="form-group">
@@ -30,7 +30,7 @@
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></br><?php echo orderAmount($db);?>&#8364;</a>
                               <ul class="dropdown-menu">
-                                    <li><a href="#">Manage Your Orders</a></li>
+                                    <li><a href="/CD-Genius/user/manage_order.php">Manage Your Orders</a></li>
                               </ul>
                         </li>
                   </ul>

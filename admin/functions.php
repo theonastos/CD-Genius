@@ -32,7 +32,7 @@
 					</tr>';
 	          	}
 	      }else{
-	      	echo "<h4>0 <h4>";
+	      	echo "<h4>0 products<h4>";
 	      }
 	}
 
