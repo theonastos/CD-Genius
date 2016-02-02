@@ -1,6 +1,7 @@
 <?php
 
-	$home	= "/CD-Genius";
+	$base_url = "http://" . $_SERVER['SERVER_NAME'] . "/CD-Genius";
+	$root_path = $_SERVER['DOCUMENT_ROOT'] . "/CD-Genius";
 
 	define('DB_SERVER', 'localhost');
 	define('DB_USERNAME', 'root');

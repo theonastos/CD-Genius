@@ -1,6 +1,6 @@
 <?php
 
-	require_once("../config.php");
+	include $_SERVER['DOCUMENT_ROOT'] . "/CD-Genius/config.php";
 		
 	function newUser($db){
 

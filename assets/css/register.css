@@ -21,8 +21,8 @@
 	transition: all 0.1s linear;
 }
 .panel-login>.panel-heading a.active{
-	color: #029f5b;
-	font-size: 18px;
+	color: #1f69b1;
+	font-size: 19px;
 }
 .panel-login>.panel-heading hr{
 	margin-top: 10px;
@@ -52,7 +52,7 @@
 	border-color: #ccc;
 }
 .btn-login {
-	background-color: #59B2E0;
+	background-color: #5c5d65;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -60,26 +60,17 @@
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #59B2E6;
+	border-color: black;
 }
 .btn-login:hover,
 .btn-login:focus {
 	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
-}
-.forgot-password {
-	text-decoration: underline;
-	color: #888;
-}
-.forgot-password:hover,
-.forgot-password:focus {
-	text-decoration: underline;
-	color: #666;
+	background-color: #4e4f56;
+	border-color: black;
 }
 
 .btn-register {
-	background-color: #1CB94E;
+	background-color: #5c5d65;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -87,11 +78,11 @@
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #1CB94A;
+	border-color: black;
 }
 .btn-register:hover,
 .btn-register:focus {
 	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
+	background-color: #4e4f56;
+	border-color: black;
 }

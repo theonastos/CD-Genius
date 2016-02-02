@@ -1,6 +1,6 @@
 <?php
 
-	include("../config.php");
+	include $_SERVER['DOCUMENT_ROOT'] . "/CD-Genius/config.php";
 
 	session_start();
 
@@ -53,13 +53,13 @@
 		echo "<br>You need to login first";
 		echo "</br></br>This page will redirect in 5 seconds";
 
-		header( "refresh:5;url=../views/home.php" );
+		header( "refresh:5;url=$base_url/views/home.php" );
 		
 	}else{
 
 		cart($db);
 
-		header("location: $home/views/home.php");
+		header("location: $base_url/views/home.php");
 
 	}
 ?>

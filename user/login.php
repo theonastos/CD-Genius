@@ -1,6 +1,6 @@
 <?php
    
-   include("../config.php");
+   include $_SERVER['DOCUMENT_ROOT'] . "/CD-Genius/config.php";
 
    session_start();
 
@@ -29,15 +29,15 @@
 
          $_SESSION['user-id'] = $row['user_id'];
 
-         $admin = $row['admin'];
+         $_SESSION['admin'] = $row['admin'];
 
-         if($admin == 1){
+         if($_SESSION['admin'] == 1){
 
-            header ("location: $home/admin/admin_panel.php");
+            header ("location: $base_url/admin/admin_panel.php");
       
          }else{
 
-            header("location: $home/views/home.php");
+            header("location: $base_url/views/home.php");
             
          }
       }else {

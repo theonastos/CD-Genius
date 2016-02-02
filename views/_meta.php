@@ -17,6 +17,12 @@
       <script src="../assets/js/bootstrap.min.js"></script>
 
       <script src="../assets/js/register.js"></script>
+
+      <script type="text/javascript">
+            function loginAlert(){
+                  alert('You need to Log In in order to see your cart!!');
+            }
+      </script>
       
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

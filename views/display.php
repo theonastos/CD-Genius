@@ -30,7 +30,7 @@
                               <h4 class="pull-right">' . $row['price'] . '&#8364;</h4>
                               <h4>' . $row['name'] . '</h4>
                               <form id="order-form" action="../user/order.php" method="post" role="form">
-                                    <button type="submit" name="add-to-cart" id="add-to-cart" class="pull-right" >
+                                    <button type="submit" name="add-to-cart" id="add-to-cart" class="btn btn-default pull-right" >
                                           <input type="hidden" name="product-id" value="'. $row['product_id'] .'">
                                           <span class="glyphicon glyphicon-shopping-cart pull-right"></span>
                                     </button>

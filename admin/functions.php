@@ -27,7 +27,7 @@
 						<td>' .$row['label_name'] . '</td>
 						<form action="admin_panel.php" method="post">
 							<input type="hidden" name="delete-id" value="' . $productID . '"/>
-							<td><input type="submit" name="delete-product-button" value="delete"/></td>
+							<td><input type="submit" class="btn btn-default" name="delete-product-button" value="delete"/></td>
 						</form>
 					</tr>';
 	          	}

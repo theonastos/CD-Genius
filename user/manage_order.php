@@ -1,6 +1,6 @@
 <?php
 	
-	include("../config.php");
+	include $_SERVER['DOCUMENT_ROOT'] . "/CD-Genius/config.php";
 
 	session_start();
 	
@@ -26,11 +26,11 @@
 						<td>' . $row['name'] . '</td>
 						<td>' . $row['price'] . '</td>
 						<td>' . $row['qty'] . '</td>
-						<form action="manage_order.php" method="post">
+						<form class="form-group" action="manage_order.php" method="post">
 							<input type="hidden" name="entry-id" value="' . $entryID . '"/>
-							<td><input type="submit" name="delete-product-button" value="delete"/></td>
-							<td><input type="submit" name="add-amount" value="+"/></td>
-							<td><input type="submit" name="remove-amount" value="-"/></td>
+							<td><input class="btn btn-default" type="submit" name="delete-product-button" value="delete"/>
+							<input class="btn btn-default" type="submit" name="add-amount" value="+"/>
+							<input class="btn btn-default" type="submit" name="remove-amount" value="-"/></td>
 						</form>
 					</tr>';
 	          	}
@@ -107,15 +107,6 @@
 
 	}
 
-	if(!$_SESSION['login_user']){
-
-		echo "<br>You need to login first";
-		echo "</br></br>This page will redirect in 5 seconds";
-
-		header( "refresh:5;url=../views/home.php" );
-		
-	}
-
 	if(isset($_POST['delete-product-button'])){
 		
 		deleteEntry($db);
@@ -129,9 +120,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	
-	<?php include "../views/_meta.php" ?>
+	<?php include $root_path . "/views/_meta.php" ?>
 	<body>
-		<?php include "../views/_header.php" ?>
+		<?php include $root_path . "/views/_header.php" ?>
 		<div class="container">
 			<h1 style="text-align:center">MANAGE ORDER</h1>
 			<h3>Products</h3>
@@ -145,5 +136,6 @@
 				<?php cartList($db); ?>
 			</table>
 		</div>
+		<?php include $root_path . "/views/_footer.php" ?>
 	</body>
 </html>
